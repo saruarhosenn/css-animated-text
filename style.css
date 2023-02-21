@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.title-wrap .title {
+  position: relative;
+  font-family: sans-serif;
+  font-weight: 900;
+  font-size: 80px;
+  color: #5a5f73;
+  display: inline-block;
+}
+
+.title-wrap .title::after {
+  content: attr(text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  color: crimson;
+  overflow: hidden;
+  transition: all 1.5s ease-in-out;
+}
+
+.title-wrap .title:hover::after {
+  width: 100%;
+}
